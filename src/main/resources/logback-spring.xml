@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- 文件输出格式 ,这里注意时间分隔符不能使用逗号，log4j支持逗号，logback不支持。例如%d{yyyy-MM-dd HH:mm:ss,SSS},则打印日志时候时区会差八个小时。-->
+    <!-- 	<property name="PATTERN" value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n" /> -->
+    <property name="PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] [%c] [%p] - %m%n" />
+    <!--&lt;!&ndash; test文件路径 &ndash;&gt;-->
+    <!--&lt;!&ndash; 	<property name="TEST_FILE_PATH" value="F:/weatherTestData/logs/conv" /> &ndash;&gt;-->
+    <!--<property name="TEST_FILE_PATH" value="/ser/program/weather/logs/conv" />-->
+    <!-- pro文件路径 -->
+    <!-- 这里表达式中，value后无论加不加斜杠，后面的<fileNamePattern>标签中，都不能使用表达式加斜杠的形式比如${TEST_FILE_PATH}/info.%d{yyyy-MM-dd}.log，这里使用表达式时候不支持斜杠。 -->
+    <!-- 	<property name="PROD_FILE_PATH" value="/ser/program/weather/logs/conv" /> -->
+    <property name="PROD_FILE_PATH" value="F:/tmp/log" />
+
+    <!-- 在该开发环境中，使用多个日志配置文件。可以启动服务的时候指定 profile （如不指定使用默认）。这个和application-*配置文件一样 -->
+    <!-- 开发环境 -->
+    <!-- 多个使用逗号隔开. 比如<springProfile name="dev,test">-->
+    <springProfile name="dev">
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>${PATTERN}</pattern>
+            </encoder>
+        </appender>
+
+        <logger name="com.weather.correction" level="debug"/>
+
+        <root level="info">
+            <appender-ref ref="CONSOLE" />
+        </root>
+    </springProfile>
+
+    <!--&lt;!&ndash; 测试环境 &ndash;&gt;-->
+    <!--<springProfile name="test">-->
+        <!--&lt;!&ndash; 每天产生一个文件 &ndash;&gt;-->
+        <!--<appender name="TEST-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+            <!--&lt;!&ndash; 文件路径 &ndash;&gt;-->
+            <!--<file>${TEST_FILE_PATH}</file>-->
+            <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+                <!--&lt;!&ndash; 文件名称 &ndash;&gt;-->
+                <!--&lt;!&ndash; 				<fileNamePattern>${TEST_FILE_PATH}/info.%d{yyyy-MM-dd}.log</fileNamePattern> &ndash;&gt;-->
+                <!--<fileNamePattern>${TEST_FILE_PATH}.%d{yyyy-MM-dd}.log</fileNamePattern>-->
+                <!--&lt;!&ndash; 文件最大保存历史数量 &ndash;&gt;-->
+                <!--<MaxHistory>100</MaxHistory>-->
+            <!--</rollingPolicy>-->
+
+            <!--<layout class="ch.qos.logback.classic.PatternLayout">-->
+                <!--<pattern>${PATTERN}</pattern>-->
+            <!--</layout>-->
+        <!--</appender>-->
+
+        <!--<root level="info">-->
+            <!--<appender-ref ref="TEST-FILE" />-->
+        <!--</root>-->
+    <!--</springProfile>-->
+
+    <!-- 生产环境 -->
+    <springProfile name="prod">
+
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>${PATTERN}</pattern>
+            </encoder>
+        </appender>
+
+        <appender name="PROD_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${PROD_FILE_PATH}</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <!-- 文件名称 -->
+                <!-- 				<fileNamePattern>${PROD_FILE_PATH}/warn.%d{yyyy-MM-dd}.log</fileNamePattern> -->
+                <fileNamePattern>${PROD_FILE_PATH}.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <!-- 文件最大保存历史数量 -->
+                <MaxHistory>100</MaxHistory>
+            </rollingPolicy>
+            <layout class="ch.qos.logback.classic.PatternLayout">
+                <pattern>${PATTERN}</pattern>
+            </layout>
+        </appender>
+
+        <!-- 		<root level="warn"> -->
+        <root level="info">
+            <!-- 		<root level="debug"> -->
+            <appender-ref ref="PROD_FILE" />
+            <appender-ref ref="CONSOLE" />
+        </root>
+    </springProfile>
+
+</configuration>

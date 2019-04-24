@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.weather.bigdata.it.cluster</groupId>
+    <artifactId>spark_hdfs_server</artifactId>
+    <version>0.0.1-felix</version>
+    <packaging>jar</packaging>
+
+
+    <name>${artifactId}</name>
+    <url>http://maven.apache.org</url>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.16.RELEASE</version>
+        <relativePath /> <!-- lookup parent from repository -->
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <scala.version>2.11.8</scala.version>
+        <java.version>1.8</java.version>
+        <commons-lang3.version>3.5</commons-lang3.version>
+        <commons-io.version>2.6</commons-io.version>
+        <felixfun.version>0.0.1-felix</felixfun.version>
+        <sparksubmit.version>0.0.1-felix</sparksubmit.version>
+        <!-- The main class to start by executing java -jar -->
+        <start-class>com.weather.bigdata.it.cluster.Application</start-class>
+    </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>internal</id>
+            <name>Internal Release Repository</name>
+            <url>http://220.243.129.233:9090/archiva/repository/internal/</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Internal Snapshot Repository</name>
+            <url>http://220.243.129.233:9090/archiva/repository/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>scala-tools.org</id>
+            <name>Scala-Tools Maven2 Repository</name>
+            <url>http://scala-tools.org/repo-releases</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>scala-tools.org</id>
+            <name>Scala-Tools Maven2 Repository</name>
+            <url>http://scala-tools.org/repo-releases</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+        </dependency>
+
+        <!--<dependency>-->
+        <!--<groupId>org.apache.hadoop</groupId>-->
+        <!--<artifactId>hadoop-client</artifactId>-->
+        <!--<version>${hadoop.version}</version>-->
+        <!--&lt;!&ndash;<scope>compile</scope>&ndash;&gt;-->
+        <!--&lt;!&ndash;<scope>${spark.jars.scope}</scope>&ndash;&gt;-->
+        <!--<exclusions>-->
+        <!--<exclusion>-->
+        <!--<groupId>org.slf4j</groupId>-->
+        <!--<artifactId>slf4j-log4j12</artifactId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+        <!--<groupId>javax.servlet</groupId>-->
+        <!--<artifactId>servlet-api</artifactId>-->
+        <!--</exclusion>-->
+        <!--</exclusions>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>com.weather.bigdata.it.utils</groupId>
+            <artifactId>felixfun</artifactId>
+            <version>${felixfun.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>servlet-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.weather.bigdata.it.spark</groupId>
+            <artifactId>sparksubmit</artifactId>
+            <version>${sparksubmit.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>servlet-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>3.3.1-1</version>
+        </dependency> -->
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.51</version>
+        </dependency>
+
+        <!--时间操作包 -->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.version}</version>
+        </dependency>
+
+        <!-- httpclient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <!--Caused by: java.lang.IllegalArgumentException: -->
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <!--将依赖注入jar包内-->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>${start-class}</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+        </plugins>
+    </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.scala-tools</groupId>
+                <artifactId>maven-scala-plugin</artifactId>
+                <configuration>
+                    <scalaVersion>${scala.version}</scalaVersion>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <pom.hdfs_url_prefix></pom.hdfs_url_prefix>
+                <pom.upload_dir>/F:/tmp/grib_spark_platform/</pom.upload_dir>
+
+
+                <pom.sparksubmit.open>false</pom.sparksubmit.open>
+                <pom.sparksubmit.regionKey>region4</pom.sparksubmit.regionKey>
+                <pom.sparksubmit.splitPath>/D:/Data/forecast/Input/</pom.sparksubmit.splitPath>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>dev</id>
+            <properties>
+                <pom.hdfs_url_prefix>hdfs://dataflow-node-1:9000</pom.hdfs_url_prefix>
+                <pom.upload_dir>/ser/program/platform/grib_spark_platform/</pom.upload_dir>
+
+
+                <pom.sparksubmit.open>false</pom.sparksubmit.open>
+                <pom.sparksubmit.regionKey>region4</pom.sparksubmit.regionKey>
+                <pom.sparksubmit.splitPath>/ser/hdfs/forecast/parameter/split/</pom.sparksubmit.splitPath>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>prod</id>
+            <properties>
+                <pom.hdfs_url_prefix>hdfs://dataflow-node-1:9000</pom.hdfs_url_prefix>
+                <pom.upload_dir>${pom.hdfs_url_prefix}/ser/program/hdfs/grib_spark_platform/</pom.upload_dir>
+
+
+                <pom.sparksubmit.open>false</pom.sparksubmit.open>
+                <pom.sparksubmit.regionKey>region4</pom.sparksubmit.regionKey>
+                <pom.sparksubmit.splitPath>/ser/hdfs/forecast/parameter/split/</pom.sparksubmit.splitPath>
+
+            </properties>
+        </profile>
+
+    </profiles>
+
+</project>
