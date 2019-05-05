@@ -1,16 +1,12 @@
 package com.weather.bigdata.it.cluster.controller;
 
-import com.alibaba.fastjson.JSON;
-import com.weather.bigdata.it.cluster.util.CasicProperties;
-import com.weather.bigdata.it.spark.sparksubmit.sparksubmit_PropertiesUtil;
-import com.weather.bigdata.it.utils.hdfsUtil.HDFSConfUtil;
+import com.weather.bigdata.it.cluster.db.localDB;
+import com.weather.bigdata.it.cluster.verification;
 import com.weather.bigdata.it.utils.hdfsUtil.HDFSFile;
 import com.weather.bigdata.it.utils.hdfsUtil.HDFSOperation1;
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,76 +14,53 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.util.HashMap;
 import java.util.Map;
-import java.util.Properties;
 
 @RestController
 @EnableAutoConfiguration
-public class FileController {
+public class uploadMyself {
 
-	private static Logger logger = LoggerFactory.getLogger(FileController.class);
-    private static Properties prop = CasicProperties.CONFPROPERTIES;
+	private static Logger logger = LoggerFactory.getLogger(uploadMyself.class);
+    private static String uploadMyself_MsgKey="uploadMyself_Msg";
 
-	@RequestMapping(value = "/file/upload", method = RequestMethod.POST)
-    public Object uploadFile(HttpServletRequest req, @RequestParam("file") MultipartFile file,String user,String password,String regionKey,String dataType,String callback){
-        String remoteHost=req.getRemoteHost();
-        String remoteAddr=req.getRemoteAddr();
-        int remotePort=req.getRemotePort();
-        String remoteUser=req.getRemoteUser();
+	@RequestMapping(value = "/deploy/uploadMyself", method = RequestMethod.POST)
+    public static Object verify(HttpServletRequest req, String user,String password,String exampleKey,@RequestParam("file") MultipartFile file){
+        Map<String, String> result= (Map<String, String>) verification.register(req,user,password);
+        boolean isroot=verification.isRoot(result);
+        if(isroot){
+            String msg="user("+user+")申请更新本接口服务";
+            logger.info(msg);
+            result.put("status", "success");
+            result.put(uploadMyself_MsgKey, msg);
+            result=uploadMyself.up(result,exampleKey,file);
+            returnUtil.showReturn(logger,result);
 
-	    //System.out.println(password);
-        String upload_dir = prop.getProperty("upload_dir");
-        logger.info(user+"发送了上传文件【{"+regionKey+","+dataType+"}】的请求。",file.getName()+"->"+upload_dir,"remoteUser("+remoteUser+"),remoteHost("+remoteHost+":"+remotePort+"),remoteAddr("+remoteAddr+")");
-
-
-        if (req.getCharacterEncoding() == null) {
-            try {
-                req.setCharacterEncoding("UTF-8");
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
-            }
-        }
-        logger.info("文件上传目录:{}",upload_dir);
-        return this.upload(file,upload_dir,regionKey,dataType,callback);
-    }
-    private Object upload(@RequestParam("file") MultipartFile file,String upload_dir0,String regionKey,String dataType,String callback) {
-
-
-		Map<String, String> result = new HashMap<String, String>();
-
-		String upload_dir1= HDFSConfUtil.formatFilename(upload_dir0);
-        String upload_dir=upload_dir1;
-        if(dataType.equals("mt_commonsLib")){
-            upload_dir=sparksubmit_PropertiesUtil.getmt_commonsLibPath_regionKey(regionKey);
         }else{
-            upload_dir=sparksubmit_PropertiesUtil.getsignallibPath_dataType_regionKey(dataType,regionKey);
+            result.put("status", "refuse");
+            result.put(uploadMyself_MsgKey, "权限不够,请联系维护人员");
         }
+        logger.info("用户"+user+"请求更新接口");
+        return returnUtil.showReturn(logger,result);
+    }
 
+    private static Map<String, String> up( Map<String, String> result,String exampleKey,@RequestParam("file") MultipartFile file) {
+        String spark_hdfs_server_rootPath=localDB.getspark_hdfs_server_Path(exampleKey);
 
-
-        if(!HDFSOperation1.exists(upload_dir)){
-            HDFSOperation1.mkdirs(upload_dir);
+        if(!HDFSOperation1.exists(spark_hdfs_server_rootPath)){
+            HDFSOperation1.mkdirs(spark_hdfs_server_rootPath);
         }
-
-		//目标文件
-
         String uploadFileName="";
-		try {
-			uploadFileName = java.net.URLDecoder.decode(file.getOriginalFilename(), "UTF-8");
-		} catch (UnsupportedEncodingException e) {
-			e.printStackTrace();
-		}
-
-
-
-		try {
+        try {
+            uploadFileName = java.net.URLDecoder.decode(file.getOriginalFilename(), "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        try {
             Long start=System.currentTimeMillis();
-            String uploadFileName_ab = upload_dir+"/"+uploadFileName;
-			//file.transferTo(destFile);
+            String uploadFileName_ab = spark_hdfs_server_rootPath+"/"+uploadFileName;
+            //file.transferTo(destFile);
             boolean writeFlag=HDFSFile.fileWriter(file.getInputStream(),uploadFileName_ab,true);
             Long end=System.currentTimeMillis();
 
@@ -95,29 +68,68 @@ public class FileController {
                 String msg="文件【" + uploadFileName + "】上传成功。";
                 result.put("status", "success");
                 result.put("msg", msg);
+                result.put("exampleKey",exampleKey);
                 result.put("fileName", uploadFileName);
                 logger.info(msg+";文件写入时间:"+(end-start)/1000+"s,写入地址:"+uploadFileName_ab);
+
+                result=exit(result);
+
             }else{
                 result.put("status", "error");
                 result.put("msg", "文件【" + uploadFileName + "】写入失败,写入地址:"+uploadFileName_ab);
             }
 
-		} catch (IllegalStateException | IOException e1) {
-			result.put("status", "error");
+        } catch (IllegalStateException | IOException e1) {
+            result.put("status", "error");
             result.put("msg", "文件【" + uploadFileName + "】上传失败。" + e1.getMessage());
             e1.printStackTrace();
-		}
-		logger.info("用户请求上传文件，服务器返回结果为：{}。", JSON.toJSONString(result));
-		if (!StringUtils.isEmpty(callback)) {
-			MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(result);
-			mappingJacksonValue.setJsonpFunction(callback);
-			return mappingJacksonValue;
-		} else {
-			return result;
-		}
+        }
+		logger.info("用户请求更新服务接口。");
+        return result;
 	}
 
-
+    private static Map<String, String> exit(Map<String, String> result){
+        System.exit(0);
+        return result;
+    }
+    //public Object verification(HttpServletRequest req,String user,String password,String regionKey,String dataType,String callback){
+    //
+    //
+    //    Properties AccountRegistration=localDB.getAccountRegistration();
+    //    if(AccountRegistration.containsKey(user)){
+    //        String password0=localDB.password(AccountRegistration,user);
+    //        if(password0.equals(password)){
+    //            //System.out.println(password);
+    //
+    //
+    //            if(localDB.getprotectedRegionSet().contains(regionKey)){
+    //                Map<String, String> result = new HashMap<String, String>();
+    //                result.put("status", "prohibited");
+    //                result.put("msg", "文件上传拒绝。该区域被保护,请选择其他区域上传测试依赖");
+    //                return result;
+    //            }else{
+    //                if (req.getCharacterEncoding() == null) {
+    //                    try {
+    //                        req.setCharacterEncoding("UTF-8");
+    //                    } catch (UnsupportedEncodingException e) {
+    //                        e.printStackTrace();
+    //                    }
+    //                }
+    //                return this.upload(file,upload_dir,regionKey,dataType,callback);
+    //            }
+    //        }else{
+    //            Map<String, String> result = new HashMap<String, String>();
+    //            result.put("status", "refuse");
+    //            result.put("msg", "拒绝。密码错误");
+    //            return result;
+    //        }
+    //    }else{
+    //        Map<String, String> result = new HashMap<String, String>();
+    //        result.put("status", "refuse");
+    //        result.put("msg", "拒绝。该用户未注册");
+    //        return result;
+    //    }
+    //}
     //@RequestMapping(value = "/file/upload1", method = RequestMethod.POST)
     //public static void uploadFile(HttpServletRequest req,Object file0) {
     //

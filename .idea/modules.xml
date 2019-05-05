@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../felixfun/felixfun.iml" filepath="$PROJECT_DIR$/../felixfun/felixfun.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../signal/signal.iml" filepath="$PROJECT_DIR$/../signal/signal.iml" />
       <module fileurl="file://$PROJECT_DIR$/spark_hdfs_server.iml" filepath="$PROJECT_DIR$/spark_hdfs_server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sparksubmit/sparksubmit.iml" filepath="$PROJECT_DIR$/../sparksubmit/sparksubmit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../split/split.iml" filepath="$PROJECT_DIR$/../split/split.iml" />
     </modules>
   </component>
 </project>

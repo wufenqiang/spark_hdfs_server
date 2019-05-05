@@ -7,6 +7,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
+
 /**
  * 初始化方法
  * @author liweifeng
@@ -19,7 +20,8 @@ public class MyApplicationRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        localDB.setSplitFile();
+        //localDB.setSplitFile();
+        localDB.initprotectedRegionSet();
         //logger.info("我是做初始化信息的。");
     }
 

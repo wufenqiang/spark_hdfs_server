@@ -1,4 +1,4 @@
-package com.weather.bigdata.it.cluster.controller;
+package com.weather.bigdata.it.cluster.htmlController;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,18 +11,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
  *
  */
 @Controller
-@RequestMapping("/tl")
-public class ThymeleafController {
+@RequestMapping("/deploy")
+public class deploy {
 	
 	@GetMapping("")
-	public String index() {
-		return "index";
+	public String deploy() {
+	    return "deploy";
 	}
 	
 	@GetMapping("helloworld")
 	@ResponseBody
 	public String hello() {
-		return "helloworld";
+	    return "helloworld";
 	}
 
 }

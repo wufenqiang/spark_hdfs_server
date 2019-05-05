@@ -4,6 +4,10 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../sparksubmit/pom.xml" />
+        <option value="$PROJECT_DIR$/../split/pom.xml" />
+        <option value="$PROJECT_DIR$/../signal/pom.xml" />
+        <option value="$PROJECT_DIR$/../felixfun/pom.xml" />
       </list>
     </option>
   </component>

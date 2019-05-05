@@ -9,8 +9,8 @@
     <!--<property name="TEST_FILE_PATH" value="/ser/program/weather/logs/conv" />-->
     <!-- pro文件路径 -->
     <!-- 这里表达式中，value后无论加不加斜杠，后面的<fileNamePattern>标签中，都不能使用表达式加斜杠的形式比如${TEST_FILE_PATH}/info.%d{yyyy-MM-dd}.log，这里使用表达式时候不支持斜杠。 -->
-    <!-- 	<property name="PROD_FILE_PATH" value="/ser/program/weather/logs/conv" /> -->
-    <property name="PROD_FILE_PATH" value="F:/tmp/log" />
+    <property name="PROD_FILE_PATH" value="./logs/spark_hdfs_server/spark_hdfs_server.log" />
+    <!--<property name="PROD_FILE_PATH" value="F:/tmp/log" />-->
 
     <!-- 在该开发环境中，使用多个日志配置文件。可以启动服务的时候指定 profile （如不指定使用默认）。这个和application-*配置文件一样 -->
     <!-- 开发环境 -->
@@ -31,26 +31,26 @@
 
     <!--&lt;!&ndash; 测试环境 &ndash;&gt;-->
     <!--<springProfile name="test">-->
-        <!--&lt;!&ndash; 每天产生一个文件 &ndash;&gt;-->
-        <!--<appender name="TEST-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
-            <!--&lt;!&ndash; 文件路径 &ndash;&gt;-->
-            <!--<file>${TEST_FILE_PATH}</file>-->
-            <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
-                <!--&lt;!&ndash; 文件名称 &ndash;&gt;-->
-                <!--&lt;!&ndash; 				<fileNamePattern>${TEST_FILE_PATH}/info.%d{yyyy-MM-dd}.log</fileNamePattern> &ndash;&gt;-->
-                <!--<fileNamePattern>${TEST_FILE_PATH}.%d{yyyy-MM-dd}.log</fileNamePattern>-->
-                <!--&lt;!&ndash; 文件最大保存历史数量 &ndash;&gt;-->
-                <!--<MaxHistory>100</MaxHistory>-->
-            <!--</rollingPolicy>-->
+    <!--&lt;!&ndash; 每天产生一个文件 &ndash;&gt;-->
+    <!--<appender name="TEST-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+    <!--&lt;!&ndash; 文件路径 &ndash;&gt;-->
+    <!--<file>${TEST_FILE_PATH}</file>-->
+    <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+    <!--&lt;!&ndash; 文件名称 &ndash;&gt;-->
+    <!--&lt;!&ndash; 				<fileNamePattern>${TEST_FILE_PATH}/info.%d{yyyy-MM-dd}.log</fileNamePattern> &ndash;&gt;-->
+    <!--<fileNamePattern>${TEST_FILE_PATH}.%d{yyyy-MM-dd}.log</fileNamePattern>-->
+    <!--&lt;!&ndash; 文件最大保存历史数量 &ndash;&gt;-->
+    <!--<MaxHistory>100</MaxHistory>-->
+    <!--</rollingPolicy>-->
 
-            <!--<layout class="ch.qos.logback.classic.PatternLayout">-->
-                <!--<pattern>${PATTERN}</pattern>-->
-            <!--</layout>-->
-        <!--</appender>-->
+    <!--<layout class="ch.qos.logback.classic.PatternLayout">-->
+    <!--<pattern>${PATTERN}</pattern>-->
+    <!--</layout>-->
+    <!--</appender>-->
 
-        <!--<root level="info">-->
-            <!--<appender-ref ref="TEST-FILE" />-->
-        <!--</root>-->
+    <!--<root level="info">-->
+    <!--<appender-ref ref="TEST-FILE" />-->
+    <!--</root>-->
     <!--</springProfile>-->
 
     <!-- 生产环境 -->

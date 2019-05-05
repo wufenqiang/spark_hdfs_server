@@ -1,5 +1,7 @@
 package com.weather.bigdata.it.cluster.util;
 
+import com.weather.bigdata.it.utils.hdfsUtil.HDFSFile;
+import com.weather.bigdata.it.utils.hdfsUtil.HDFSOperation1;
 import org.springframework.util.StringUtils;
 
 import java.io.*;
@@ -89,6 +91,17 @@ import java.util.Properties;
  *
  */
 public class PropertiesUtils {
+
+    public static Properties readProperties1(String filename){
+        System.out.println("加载filename="+filename);
+        Properties prop=new Properties();
+        try {
+            prop.load(HDFSFile.fileInputStream(filename));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return prop;
+    }
 
 	/**
 	 * 读取资源文件,并处理中文乱码

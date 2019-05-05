@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>deploy</title>
+</head>
+<body>
+<form action="/deploy/upload" method="post" enctype="multipart/form-data">
+    <h1>直接部署</h1>
+    <p>账户：<input type="text" name="user"/></p>
+    <p>密码：<input type="password" name="password"/><br/></p>
+
+    <p>region：<input type="text" name="regionKey"/><br/></p>
+    <p>deploy(platform,mt_commons,signal*)：<input type="text" name="dataType"/><br/></p>
+    <input type="file" name="file"/>
+    <button type="submit">上传</button>
+</form>
+</body>
+</html>

@@ -6,11 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="felixfun" />
+        <module name="signal" />
         <module name="spark_hdfs_server" />
+        <module name="sparksubmit" />
+        <module name="split" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="felixfun" target="1.5" />
+      <module name="signal" target="1.5" />
       <module name="spark_hdfs_server" target="1.8" />
+      <module name="sparksubmit" target="1.5" />
+      <module name="split" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

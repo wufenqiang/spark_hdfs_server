@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>submit</title>
+</head>
+
+<body>
+<form action="/submit/job" method="post" enctype="multipart/form-data">
+    <h1>信号测试</h1>
+    <p>账户：<input type="text" name="user"/></p>
+    <p>密码：<input type="password" name="password"/><br/></p>
+
+    <p>分区参数文件：<input type="text" name="splitFile"/><br/></p>
+    <p>信号：<input type="text" name="signalFile"/><br/></p>
+
+    <button type="submit">单任务提交</button>
+</form>
+</body>
+</html>
