@@ -160,9 +160,9 @@
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-xc:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-mapreduce-client-jobclient:2.6.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.hadoop:hadoop-annotations:2.6.5" level="project" />
-    <orderEntry type="library" name="Maven: com.weather.bigdata.it.spark.platform:split:0.0.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: com.weather.bigdata.it.utils:felixfun:0.0.1-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: com.weather.bigdata.it.spark.platform:signal:0.0.1-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="split" />
+    <orderEntry type="module" module-name="felixfun" />
+    <orderEntry type="module" module-name="signal" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:1.5.16.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:1.5.16.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:1.5.16.RELEASE" level="project" />
