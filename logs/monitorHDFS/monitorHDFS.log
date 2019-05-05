@@ -1,0 +1,3 @@
+[2019-04-30 09:22:58,317] [] [] [1556587378315] [Felix-PC]  []  INFO monitorHDFS:297 
+[2019-04-30 09:22:58,322] [] [] [1556587378315] [Felix-PC]  []  INFO monitorHDFS:37 load sparksubmit_config.properties
+[2019-04-30 09:22:58,322] [] [] [1556587378315] [Felix-PC]  []  INFO monitorHDFS:38 {JAVA_HOME=/usr/local/server/java/, mainClass1Root=com.weather.bigdata.mt.signal, mainClass0=com.weather.bigdata.itmt.signalInput.signalInput_mainClass, sparksubmit_configs_out_rootPath=hdfs://dataflow-node-1:9000/ser/program/hdfs/sparksubmit/, Master=yarn, DeployMode=cluster, mainJar=signalInput, SPARK_HOME=/usr/hdp/3.0.0.0-1634/spark2/, grib_spark_platformRoot=hdfs://dataflow-node-1:9000/ser/program/hdfs/grib_spark_platform/}

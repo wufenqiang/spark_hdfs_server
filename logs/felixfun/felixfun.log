@@ -1,0 +1,5 @@
+[] [Felix-PC] [2019-04-30 09:22:58,379]  INFO felixfun:15 
+[] [Felix-PC] [2019-04-30 09:22:58,381]  INFO felixfun:308 copyfile:from_filename(file:/F:/tmp/grib_spark_platform/region4/signalLib/test)-->to_filename(file:/F:/tmp/grib_spark_platform/region5/signalLib/test);overwrite=true;deleteSource=false
+[] [Felix-PC] [2019-04-30 09:22:58,502]  INFO felixfun:308 copyfile:from_filename(file:/F:/tmp/grib_spark_platform/region4/signalLib/test/Gr2b_TEM_out.properties)-->to_filename(file:/F:/tmp/grib_spark_platform/region5/signalLib/test/Gr2b_TEM_out.properties);overwrite=true;deleteSource=false
+[] [Felix-PC] [2019-04-30 09:22:58,559]  INFO felixfun:450 源地址[file](file:/F:/tmp/grib_spark_platform/region4/signalLib/test/Gr2b_TEM_out.properties)->目标地址[directory](file:/F:/tmp/grib_spark_platform/region5/signalLib/test/Gr2b_TEM_out.properties)
+[] [Felix-PC] [2019-04-30 09:22:58,563]  INFO felixfun:450 源地址[file](file:/F:/tmp/grib_spark_platform/region4/signalLib/test)->目标地址[directory](file:/F:/tmp/grib_spark_platform/region5/signalLib/test)

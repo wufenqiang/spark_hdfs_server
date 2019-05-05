@@ -1,0 +1,240 @@
+2019-04-30 09:18:34.027 [restartedMain] [com.weather.bigdata.it.cluster.Application] [INFO] - Starting Application on Felix-PC with PID 19344 (F:\WorkSpace\IDEAWorkSpace\spark_hdfs_server\target\classes started by wingc in F:\WorkSpace\IDEAWorkSpace\spark_hdfs_server)
+2019-04-30 09:18:34.035 [restartedMain] [com.weather.bigdata.it.cluster.Application] [INFO] - The following profiles are active: prod
+2019-04-30 09:18:34.271 [restartedMain] [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext] [INFO] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@51d592b7: startup date [Tue Apr 30 09:18:34 CST 2019]; root of context hierarchy
+2019-04-30 09:18:34.300 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 5.3.6.Final
+2019-04-30 09:18:35.341 [restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [INFO] - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-04-30 09:18:36.163 [restartedMain] [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer] [INFO] - Tomcat initialized with port(s): 8081 (http)
+2019-04-30 09:18:36.179 [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [INFO] - Initializing ProtocolHandler ["http-nio-8081"]
+2019-04-30 09:18:36.192 [restartedMain] [org.apache.catalina.core.StandardService] [INFO] - Starting service [Tomcat]
+2019-04-30 09:18:36.192 [restartedMain] [org.apache.catalina.core.StandardEngine] [INFO] - Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-04-30 09:18:36.334 [localhost-startStop-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO] - Initializing Spring embedded WebApplicationContext
+2019-04-30 09:18:36.335 [localhost-startStop-1] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 2064 ms
+2019-04-30 09:18:36.477 [localhost-startStop-1] [org.springframework.boot.web.servlet.ServletRegistrationBean] [INFO] - Mapping servlet: 'dispatcherServlet' to [/]
+2019-04-30 09:18:36.483 [localhost-startStop-1] [org.springframework.boot.web.servlet.FilterRegistrationBean] [INFO] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-30 09:18:36.483 [localhost-startStop-1] [org.springframework.boot.web.servlet.FilterRegistrationBean] [INFO] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-30 09:18:36.484 [localhost-startStop-1] [org.springframework.boot.web.servlet.FilterRegistrationBean] [INFO] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-30 09:18:36.484 [localhost-startStop-1] [org.springframework.boot.web.servlet.FilterRegistrationBean] [INFO] - Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-30 09:18:36.827 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] [INFO] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@51d592b7: startup date [Tue Apr 30 09:18:34 CST 2019]; root of context hierarchy
+2019-04-30 09:18:36.900 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/operation/exit],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.exitApplication.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2019-04-30 09:18:36.901 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/submit/job],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.job.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-04-30 09:18:36.901 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/operation/mvjar],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.mvjar.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-04-30 09:18:36.902 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/reset/delete],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.resetdelete.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-04-30 09:18:36.902 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deploy/upload],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.upload.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile)
+2019-04-30 09:18:36.903 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deploy/uploadMyself],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.uploadMyself.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile)
+2019-04-30 09:18:36.903 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deploy/reparameter],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.uploadParameter.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile)
+2019-04-30 09:18:36.907 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deploy/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.deploy.hello()
+2019-04-30 09:18:36.907 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deploy],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.deploy.deploy()
+2019-04-30 09:18:36.908 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deployMyself],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.deployMyself.deployMyself()
+2019-04-30 09:18:36.908 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deployMyself/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.deployMyself.hello()
+2019-04-30 09:18:36.909 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/exit],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.exit.exit()
+2019-04-30 09:18:36.909 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/exit/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.exit.hello()
+2019-04-30 09:18:36.910 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/mvregion/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.mvregion.hello()
+2019-04-30 09:18:36.910 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/mvregion],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.mvregion.mvregion()
+2019-04-30 09:18:36.911 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/reparameter/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.reparameter.hello()
+2019-04-30 09:18:36.912 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/reparameter],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.reparameter.reparameter()
+2019-04-30 09:18:36.913 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/reset],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.reset.reset()
+2019-04-30 09:18:36.913 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/reset/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.reset.hello()
+2019-04-30 09:18:36.914 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/submit],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.submit.submit()
+2019-04-30 09:18:36.914 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/submit/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.submit.hello()
+2019-04-30 09:18:36.916 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-30 09:18:36.916 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-30 09:18:36.944 [restartedMain] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-30 09:18:36.944 [restartedMain] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-30 09:18:36.984 [restartedMain] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-30 09:18:37.574 [restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO] - LiveReload server is running on port 35729
+2019-04-30 09:18:37.618 [restartedMain] [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] [INFO] - Registering beans for JMX exposure on startup
+2019-04-30 09:18:37.627 [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [INFO] - Starting ProtocolHandler ["http-nio-8081"]
+2019-04-30 09:18:37.637 [restartedMain] [org.apache.tomcat.util.net.NioSelectorPool] [INFO] - Using a shared selector for servlet write/read
+2019-04-30 09:18:37.652 [restartedMain] [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer] [INFO] - Tomcat started on port(s): 8081 (http)
+2019-04-30 09:18:37.661 [restartedMain] [com.weather.bigdata.it.cluster.Application] [INFO] - Started Application in 4.249 seconds (JVM running for 5.199)
+2019-04-30 09:18:38.898 [http-nio-8081-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-30 09:18:38.898 [http-nio-8081-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-30 09:18:38.927 [http-nio-8081-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - FrameworkServlet 'dispatcherServlet': initialization completed in 28 ms
+2019-04-30 09:18:38.974 [http-nio-8081-exec-1] [org.thymeleaf.TemplateEngine] [INFO] - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2019-04-30 09:18:39.028 [http-nio-8081-exec-1] [org.thymeleaf.templateresolver.AbstractTemplateResolver] [INFO] - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+2019-04-30 09:18:39.029 [http-nio-8081-exec-1] [org.thymeleaf.templateresolver.AbstractTemplateResolver] [INFO] - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2019-04-30 09:18:39.029 [http-nio-8081-exec-1] [org.thymeleaf.messageresolver.AbstractMessageResolver] [INFO] - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2019-04-30 09:18:39.029 [http-nio-8081-exec-1] [org.thymeleaf.messageresolver.AbstractMessageResolver] [INFO] - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2019-04-30 09:18:39.033 [http-nio-8081-exec-1] [org.thymeleaf.TemplateEngine.CONFIG] [INFO] - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * XML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2019-04-30 09:18:39.033 [http-nio-8081-exec-1] [org.thymeleaf.TemplateEngine] [INFO] - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2019-04-30 09:20:56.581 [restartedMain] [com.weather.bigdata.it.cluster.Application] [INFO] - Starting Application on Felix-PC with PID 24612 (F:\WorkSpace\IDEAWorkSpace\spark_hdfs_server\target\classes started by wingc in F:\WorkSpace\IDEAWorkSpace\spark_hdfs_server)
+2019-04-30 09:20:56.582 [restartedMain] [com.weather.bigdata.it.cluster.Application] [INFO] - The following profiles are active: prod
+2019-04-30 09:20:56.886 [restartedMain] [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext] [INFO] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ea2836d: startup date [Tue Apr 30 09:20:56 CST 2019]; root of context hierarchy
+2019-04-30 09:20:56.923 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 5.3.6.Final
+2019-04-30 09:20:57.989 [restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [INFO] - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-04-30 09:20:58.667 [restartedMain] [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer] [INFO] - Tomcat initialized with port(s): 8081 (http)
+2019-04-30 09:20:58.682 [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [INFO] - Initializing ProtocolHandler ["http-nio-8081"]
+2019-04-30 09:20:58.696 [restartedMain] [org.apache.catalina.core.StandardService] [INFO] - Starting service [Tomcat]
+2019-04-30 09:20:58.697 [restartedMain] [org.apache.catalina.core.StandardEngine] [INFO] - Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-04-30 09:20:58.826 [localhost-startStop-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO] - Initializing Spring embedded WebApplicationContext
+2019-04-30 09:20:58.826 [localhost-startStop-1] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 1940 ms
+2019-04-30 09:20:58.981 [localhost-startStop-1] [org.springframework.boot.web.servlet.ServletRegistrationBean] [INFO] - Mapping servlet: 'dispatcherServlet' to [/]
+2019-04-30 09:20:58.986 [localhost-startStop-1] [org.springframework.boot.web.servlet.FilterRegistrationBean] [INFO] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-30 09:20:58.987 [localhost-startStop-1] [org.springframework.boot.web.servlet.FilterRegistrationBean] [INFO] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-30 09:20:58.987 [localhost-startStop-1] [org.springframework.boot.web.servlet.FilterRegistrationBean] [INFO] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-30 09:20:58.987 [localhost-startStop-1] [org.springframework.boot.web.servlet.FilterRegistrationBean] [INFO] - Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-30 09:20:59.348 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] [INFO] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7ea2836d: startup date [Tue Apr 30 09:20:56 CST 2019]; root of context hierarchy
+2019-04-30 09:20:59.426 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/operation/exit],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.exitApplication.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2019-04-30 09:20:59.427 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/submit/job],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.job.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-04-30 09:20:59.428 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/operation/mvjar],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.mvjar.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-04-30 09:20:59.428 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/reset/delete],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.resetdelete.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-04-30 09:20:59.428 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deploy/upload],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.upload.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile)
+2019-04-30 09:20:59.429 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deploy/uploadMyself],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.uploadMyself.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile)
+2019-04-30 09:20:59.430 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deploy/reparameter],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.uploadParameter.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile)
+2019-04-30 09:20:59.432 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deploy],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.deploy.deploy()
+2019-04-30 09:20:59.433 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deploy/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.deploy.hello()
+2019-04-30 09:20:59.433 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deployMyself],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.deployMyself.deployMyself()
+2019-04-30 09:20:59.434 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deployMyself/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.deployMyself.hello()
+2019-04-30 09:20:59.434 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/exit],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.exit.exit()
+2019-04-30 09:20:59.434 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/exit/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.exit.hello()
+2019-04-30 09:20:59.435 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/mvregion],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.mvregion.mvregion()
+2019-04-30 09:20:59.435 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/mvregion/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.mvregion.hello()
+2019-04-30 09:20:59.436 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/reparameter],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.reparameter.reparameter()
+2019-04-30 09:20:59.436 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/reparameter/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.reparameter.hello()
+2019-04-30 09:20:59.436 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/reset],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.reset.reset()
+2019-04-30 09:20:59.436 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/reset/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.reset.hello()
+2019-04-30 09:20:59.437 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/submit],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.submit.submit()
+2019-04-30 09:20:59.437 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/submit/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.submit.hello()
+2019-04-30 09:20:59.438 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-30 09:20:59.439 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-30 09:20:59.462 [restartedMain] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-30 09:20:59.462 [restartedMain] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-30 09:20:59.497 [restartedMain] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-30 09:21:00.061 [restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO] - LiveReload server is running on port 35729
+2019-04-30 09:21:00.108 [restartedMain] [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] [INFO] - Registering beans for JMX exposure on startup
+2019-04-30 09:21:00.122 [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [INFO] - Starting ProtocolHandler ["http-nio-8081"]
+2019-04-30 09:21:00.132 [restartedMain] [org.apache.tomcat.util.net.NioSelectorPool] [INFO] - Using a shared selector for servlet write/read
+2019-04-30 09:21:00.145 [restartedMain] [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer] [INFO] - Tomcat started on port(s): 8081 (http)
+2019-04-30 09:21:00.152 [restartedMain] [com.weather.bigdata.it.cluster.Application] [INFO] - Started Application in 4.144 seconds (JVM running for 4.875)
+2019-04-30 09:21:56.807 [http-nio-8081-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-30 09:21:56.807 [http-nio-8081-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-30 09:21:56.827 [http-nio-8081-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2019-04-30 09:21:56.885 [http-nio-8081-exec-1] [org.thymeleaf.TemplateEngine] [INFO] - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2019-04-30 09:21:56.939 [http-nio-8081-exec-1] [org.thymeleaf.templateresolver.AbstractTemplateResolver] [INFO] - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+2019-04-30 09:21:56.940 [http-nio-8081-exec-1] [org.thymeleaf.templateresolver.AbstractTemplateResolver] [INFO] - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2019-04-30 09:21:56.940 [http-nio-8081-exec-1] [org.thymeleaf.messageresolver.AbstractMessageResolver] [INFO] - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2019-04-30 09:21:56.940 [http-nio-8081-exec-1] [org.thymeleaf.messageresolver.AbstractMessageResolver] [INFO] - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2019-04-30 09:21:56.944 [http-nio-8081-exec-1] [org.thymeleaf.TemplateEngine.CONFIG] [INFO] - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * XML
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2019-04-30 09:21:56.944 [http-nio-8081-exec-1] [org.thymeleaf.TemplateEngine] [INFO] - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
+2019-04-30 09:22:44.918 [http-nio-8081-exec-9] [com.weather.bigdata.it.cluster.db.localDB] [INFO] - accountFile=/F:/WorkSpace/IDEAWorkSpace/spark_hdfs_server/src/test/resources_out/accountRegistration.properties
+2019-04-30 09:22:45.304 [http-nio-8081-exec-9] [com.weather.bigdata.it.cluster.verification] [INFO] - lijing注册通过,身份为mt
+2019-04-30 09:22:45.304 [http-nio-8081-exec-9] [com.weather.bigdata.it.cluster.verification] [INFO] - lijing;remoteUser(null),remoteHost(0:0:0:0:0:0:0:1:59798),remoteAddr(0:0:0:0:0:0:0:1)
+2019-04-30 09:22:45.304 [http-nio-8081-exec-9] [com.weather.bigdata.it.cluster.controller.mvjar] [INFO] - 用户lijing请求移动部署区域region_from(region4),region_to(region1)
+2019-04-30 09:22:45.359 [http-nio-8081-exec-9] [com.weather.bigdata.it.cluster.controller.mvjar] [INFO] - 用户请求重启服务，服务器返回结果为：{"isMt":"true","role":"mt","服务返回时间":"Tue Apr 30 09:22:45 CST 2019","isRoot":"false","isIt":"false","pass":"true","服务返回时间戳":"1556587365305","isAdmin1":"false","isAdmin0":"false","register":"false","mvjar_Msg":"权限不够,不可移动到准线上区域,使用admin1操作该区域"}。
+2019-04-30 09:22:58.274 [http-nio-8081-exec-10] [com.weather.bigdata.it.cluster.db.localDB] [INFO] - accountFile=/F:/WorkSpace/IDEAWorkSpace/spark_hdfs_server/src/test/resources_out/accountRegistration.properties
+2019-04-30 09:22:58.298 [http-nio-8081-exec-10] [com.weather.bigdata.it.cluster.verification] [INFO] - lijing注册通过,身份为mt
+2019-04-30 09:22:58.298 [http-nio-8081-exec-10] [com.weather.bigdata.it.cluster.verification] [INFO] - lijing;remoteUser(null),remoteHost(0:0:0:0:0:0:0:1:59798),remoteAddr(0:0:0:0:0:0:0:1)
+2019-04-30 09:22:58.376 [http-nio-8081-exec-10] [com.weather.bigdata.it.cluster.controller.mvjar] [INFO] - labPath_from(file:/F:/tmp/grib_spark_platform/region4/signalLib/test/)->labPath_to(file:/F:/tmp/grib_spark_platform/region5/signalLib/test/)
+2019-04-30 09:22:58.563 [http-nio-8081-exec-10] [com.weather.bigdata.it.cluster.controller.mvjar] [INFO] - 用户请求复制测试区
+2019-04-30 09:22:58.563 [http-nio-8081-exec-10] [com.weather.bigdata.it.cluster.controller.mvjar] [INFO] - 用户lijing请求移动部署区域region_from(region4),region_to(region5)
+2019-04-30 09:22:58.563 [http-nio-8081-exec-10] [com.weather.bigdata.it.cluster.controller.mvjar] [INFO] - 用户请求重启服务，服务器返回结果为：{"isMt":"true","role":"mt","服务返回时间":"Tue Apr 30 09:22:58 CST 2019","isRoot":"false","isIt":"false","pass":"true","mvjar":"region4->region5,区域复制结果true","服务返回时间戳":"1556587378563","isAdmin1":"false","isAdmin0":"false","register":"false"}。
+2019-04-30 09:26:37.550 [restartedMain] [com.weather.bigdata.it.cluster.Application] [INFO] - Starting Application on Felix-PC with PID 26868 (F:\WorkSpace\IDEAWorkSpace\spark_hdfs_server\target\classes started by wingc in F:\WorkSpace\IDEAWorkSpace\spark_hdfs_server)
+2019-04-30 09:26:37.551 [restartedMain] [com.weather.bigdata.it.cluster.Application] [INFO] - The following profiles are active: prod
+2019-04-30 09:26:37.852 [background-preinit] [org.hibernate.validator.internal.util.Version] [INFO] - HV000001: Hibernate Validator 5.3.6.Final
+2019-04-30 09:26:37.859 [restartedMain] [org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext] [INFO] - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@54c87515: startup date [Tue Apr 30 09:26:37 CST 2019]; root of context hierarchy
+2019-04-30 09:26:38.956 [restartedMain] [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor] [INFO] - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-04-30 09:26:39.636 [restartedMain] [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer] [INFO] - Tomcat initialized with port(s): 8081 (http)
+2019-04-30 09:26:39.651 [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [INFO] - Initializing ProtocolHandler ["http-nio-8081"]
+2019-04-30 09:26:39.665 [restartedMain] [org.apache.catalina.core.StandardService] [INFO] - Starting service [Tomcat]
+2019-04-30 09:26:39.666 [restartedMain] [org.apache.catalina.core.StandardEngine] [INFO] - Starting Servlet Engine: Apache Tomcat/8.5.34
+2019-04-30 09:26:39.797 [localhost-startStop-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO] - Initializing Spring embedded WebApplicationContext
+2019-04-30 09:26:39.797 [localhost-startStop-1] [org.springframework.web.context.ContextLoader] [INFO] - Root WebApplicationContext: initialization completed in 1938 ms
+2019-04-30 09:26:39.950 [localhost-startStop-1] [org.springframework.boot.web.servlet.ServletRegistrationBean] [INFO] - Mapping servlet: 'dispatcherServlet' to [/]
+2019-04-30 09:26:39.955 [localhost-startStop-1] [org.springframework.boot.web.servlet.FilterRegistrationBean] [INFO] - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-04-30 09:26:39.955 [localhost-startStop-1] [org.springframework.boot.web.servlet.FilterRegistrationBean] [INFO] - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-04-30 09:26:39.955 [localhost-startStop-1] [org.springframework.boot.web.servlet.FilterRegistrationBean] [INFO] - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-04-30 09:26:39.955 [localhost-startStop-1] [org.springframework.boot.web.servlet.FilterRegistrationBean] [INFO] - Mapping filter: 'requestContextFilter' to: [/*]
+2019-04-30 09:26:40.309 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] [INFO] - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@54c87515: startup date [Tue Apr 30 09:26:37 CST 2019]; root of context hierarchy
+2019-04-30 09:26:40.392 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/operation/exit],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.exitApplication.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String)
+2019-04-30 09:26:40.394 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/submit/job],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.job.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-04-30 09:26:40.394 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/operation/mvjar],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.mvjar.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-04-30 09:26:40.395 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/reset/delete],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.resetdelete.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2019-04-30 09:26:40.395 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deploy/upload],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.upload.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile)
+2019-04-30 09:26:40.396 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deploy/uploadMyself],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.uploadMyself.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile)
+2019-04-30 09:26:40.396 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deploy/reparameter],methods=[POST]}" onto public static java.lang.Object com.weather.bigdata.it.cluster.controller.uploadParameter.verify(javax.servlet.http.HttpServletRequest,java.lang.String,java.lang.String,java.lang.String,org.springframework.web.multipart.MultipartFile)
+2019-04-30 09:26:40.400 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deploy],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.deploy.deploy()
+2019-04-30 09:26:40.400 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deploy/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.deploy.hello()
+2019-04-30 09:26:40.401 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deployMyself/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.deployMyself.hello()
+2019-04-30 09:26:40.401 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/deployMyself],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.deployMyself.deployMyself()
+2019-04-30 09:26:40.402 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/exit],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.exit.exit()
+2019-04-30 09:26:40.402 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/exit/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.exit.hello()
+2019-04-30 09:26:40.402 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/mvregion/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.mvregion.hello()
+2019-04-30 09:26:40.402 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/mvregion],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.mvregion.mvregion()
+2019-04-30 09:26:40.403 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/reparameter/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.reparameter.hello()
+2019-04-30 09:26:40.403 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/reparameter],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.reparameter.reparameter()
+2019-04-30 09:26:40.404 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/reset],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.reset.reset()
+2019-04-30 09:26:40.404 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/reset/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.reset.hello()
+2019-04-30 09:26:40.404 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/submit],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.submit.submit()
+2019-04-30 09:26:40.405 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/submit/helloworld],methods=[GET]}" onto public java.lang.String com.weather.bigdata.it.cluster.htmlController.submit.hello()
+2019-04-30 09:26:40.406 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-04-30 09:26:40.406 [restartedMain] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] [INFO] - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-04-30 09:26:40.447 [restartedMain] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-30 09:26:40.447 [restartedMain] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-30 09:26:40.488 [restartedMain] [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping] [INFO] - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-04-30 09:26:41.029 [restartedMain] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO] - LiveReload server is running on port 35729
+2019-04-30 09:26:41.079 [restartedMain] [org.springframework.jmx.export.annotation.AnnotationMBeanExporter] [INFO] - Registering beans for JMX exposure on startup
+2019-04-30 09:26:41.089 [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [INFO] - Starting ProtocolHandler ["http-nio-8081"]
+2019-04-30 09:26:41.101 [restartedMain] [org.apache.tomcat.util.net.NioSelectorPool] [INFO] - Using a shared selector for servlet write/read
+2019-04-30 09:26:41.116 [restartedMain] [org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer] [INFO] - Tomcat started on port(s): 8081 (http)
+2019-04-30 09:26:41.124 [restartedMain] [com.weather.bigdata.it.cluster.Application] [INFO] - Started Application in 4.177 seconds (JVM running for 4.984)
+2019-04-30 09:27:01.196 [http-nio-8081-exec-1] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-04-30 09:27:01.196 [http-nio-8081-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - FrameworkServlet 'dispatcherServlet': initialization started
+2019-04-30 09:27:01.222 [http-nio-8081-exec-1] [org.springframework.web.servlet.DispatcherServlet] [INFO] - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+2019-04-30 09:27:01.271 [http-nio-8081-exec-1] [org.thymeleaf.TemplateEngine] [INFO] - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2019-04-30 09:27:01.313 [http-nio-8081-exec-1] [org.thymeleaf.templateresolver.AbstractTemplateResolver] [INFO] - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+2019-04-30 09:27:01.313 [http-nio-8081-exec-1] [org.thymeleaf.templateresolver.AbstractTemplateResolver] [INFO] - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2019-04-30 09:27:01.313 [http-nio-8081-exec-1] [org.thymeleaf.messageresolver.AbstractMessageResolver] [INFO] - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2019-04-30 09:27:01.313 [http-nio-8081-exec-1] [org.thymeleaf.messageresolver.AbstractMessageResolver] [INFO] - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2019-04-30 09:27:01.316 [http-nio-8081-exec-1] [org.thymeleaf.TemplateEngine.CONFIG] [INFO] - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * XML
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XHTML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2019-04-30 09:27:01.316 [http-nio-8081-exec-1] [org.thymeleaf.TemplateEngine] [INFO] - [THYMELEAF] TEMPLATE ENGINE INITIALIZED
